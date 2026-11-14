@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thindesk | Chamados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="logo">
+        <h1>Thindesk</h1>
+        <p>Painel Administrativo</p>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html" class="menu-item">Dashboard</a>
+        <a href="chamados.html" class="menu-item ativo">Chamados</a>
+        <a href="analises.html" class="menu-item">Análises</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Sistema de Gestão de Chamados</p>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+      <header class="cabecalho">
+        <div>
+          <p class="subtitulo">Gerenciamento de chamados</p>
+          <h2>Chamados</h2>
+        </div>
+      </header>
+
+      <section class="secao">
+        <div class="secao-titulo">
+          <h3>Lista de chamados</h3>
+          <p>Consulte e acompanhe os chamados registrados no sistema.</p>
+        </div>
+
+        <div class="painel">
+          <div class="filtros">
+            <select id="filtroStatus">
+              <option value="">Todos os status</option>
+              <option value="ABERTO">Aberto</option>
+              <option value="EM_ANDAMENTO">Em andamento</option>
+              <option value="AGUARDANDO">Aguardando</option>
+              <option value="RESOLVIDO">Resolvido</option>
+              <option value="CANCELADO">Cancelado</option>
+            </select>
+
+            <select id="filtroPrioridade">
+              <option value="">Todas as prioridades</option>
+              <option value="BAIXA">Baixa</option>
+              <option value="MEDIA">Média</option>
+              <option value="ALTA">Alta</option>
+              <option value="CRITICA">Crítica</option>
+            </select>
+
+            <button id="btnFiltrar" type="button">
+              Filtrar
+            </button>
+          </div>
+
+          <div class="tabela-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Título</th>
+                  <th>Tipo</th>
+                  <th>Prioridade</th>
+                  <th>Status</th>
+                  <th>Solicitante</th>
+                  <th>Data</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+
+              <tbody id="tabelaChamados">
+                <tr>
+                  <td colspan="8">Aguardando carregamento...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <footer class="rodape">
+        <p>Thindesk — Gerenciamento de Chamados</p>
+      </footer>
+    </main>
+    </div>
+  
+  <div id="modalDetalhes" class="modal-overlay">
+    <div class="modal-conteudo">
+      <div class="modal-cabecalho">
+        <h2>Detalhes do chamado</h2>
+        <button id="btnFecharModal" type="button">×</button>
+      </div>
+
+      <div id="conteudoDetalhes">
+        <p>Carregando informações...</p>
+      </div>
+
+<div id="formularioStatus" class="formulario-status">
+  <h3>Atualizar status</h3>
+
+  <label for="novoStatus">Novo status</label>
+  <select id="novoStatus">
+    <option value="">Selecione um status</option>
+    <option value="ABERTO">Aberto</option>
+    <option value="EM_ANDAMENTO">Em andamento</option>
+    <option value="AGUARDANDO">Aguardando</option>
+    <option value="RESOLVIDO">Resolvido</option>
+    <option value="CANCELADO">Cancelado</option>
+  </select>
+
+  <label for="consideracaoTecnica">Consideração técnica</label>
+  <textarea
+    id="consideracaoTecnica"
+    rows="3"
+    placeholder="Descreva o motivo da alteração"
+  ></textarea>
+
+  <button id="btnSalvarStatus" type="button">
+    Salvar alteração
+  </button>
+
+  <p id="mensagemStatus"></p>
+</div>
+
+    </div>
+  </div>
+
+  <script src="chamados.js"></script>
+</body>
+</html>
