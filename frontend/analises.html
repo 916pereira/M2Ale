@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thindesk | Análises</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="logo">
+        <h1>Thindesk</h1>
+        <p>Painel Administrativo</p>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html" class="menu-item">Dashboard</a>
+        <a href="chamados.html" class="menu-item">Chamados</a>
+        <a href="analises.html" class="menu-item ativo">Análises</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Sistema de Gestão de Chamados</p>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+      <header class="cabecalho">
+        <div>
+          <p class="subtitulo">Relatórios e indicadores</p>
+          <h2>Análises de Chamados</h2>
+        </div>
+      </header>
+
+      <section>
+        <div class="secao-titulo">
+          <h3>Análise de desempenho</h3>
+          <p>Acompanhe os resultados e a distribuição dos chamados.</p>
+        </div>
+
+        <div class="painel">
+          <h3>Filtrar por período</h3>
+
+          <div class="filtros filtros-analises">
+            <div class="campo-filtro">
+              <label for="dataInicio">Data inicial</label>
+              <input type="date" id="dataInicio">
+            </div>
+
+            <div class="campo-filtro">
+              <label for="dataFim">Data final</label>
+              <input type="date" id="dataFim">
+            </div>
+
+            <button id="btnAnalisar" type="button">
+              Analisar
+            </button>
+          </div>
+    <div class="resumo-analises">
+      <div class="card-resumo-analise">
+        <p>Total de chamados no período</p>
+        <h2 id="totalPeriodo">--</h2>
+      </div>
+
+      <div class="card-resumo-analise">
+        <p>Média diária de chamados</p>
+        <h2 id="mediaPeriodo">--</h2>
+      </div>
+    </div>
+      <div class="resultado-analise">
+        <h3>Chamados registrados no período</h3>
+        <div class="grafico-analise-container">
+          <canvas id="graficoAnalisePeriodo"></canvas>
+        </div>
+    <div class="resultado-analise">
+      <h3>Chamados resolvidos no período</h3>
+      <div class="grafico-analise-container">
+        <canvas id="graficoResolvidosPeriodo"></canvas>
+      </div>
+    </div>
+
+      </div>
+        </div>
+      </section>
+
+      <footer class="rodape">
+        <p>Thindesk — Análises Administrativas</p>
+      </footer>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="analises.js"></script>
+</body>
+</html>

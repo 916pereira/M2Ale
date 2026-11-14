@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thindesk | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="logo">
+        <h1>Thindesk</h1>
+        <p>Painel Administrativo</p>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html" class="menu-item ativo">Dashboard</a>
+        <a href="chamados.html" class="menu-item">Chamados</a>
+        <a href="analises.html" class="menu-item">Análises</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Sistema de Gestão de Chamados</p>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+      <header class="cabecalho">
+        <div>
+          <p class="subtitulo">Visão geral do sistema</p>
+          <h2>Dashboard Administrativo</h2>
+        </div>
+
+        <button id="btnAtualizar" type="button">
+          Atualizar dados
+        </button>
+      </header>
+
+      <section id="dashboard" class="secao">
+        <div class="secao-titulo">
+          <h3>Indicadores gerais</h3>
+          <p>Acompanhe a situação dos chamados em tempo real.</p>
+        </div>
+
+        <div class="indicadores">
+          <article class="card">
+            <span>Total de chamados</span>
+            <strong id="totalChamados">--</strong>
+          </article>
+
+          <article class="card">
+            <span>Abertos</span>
+            <strong id="chamadosAbertos">--</strong>
+          </article>
+
+          <article class="card">
+            <span>Em andamento</span>
+            <strong id="chamadosAndamento">--</strong>
+          </article>
+
+          <article class="card">
+            <span>Aguardando</span>
+            <strong id="chamadosAguardando">--</strong>
+          </article>
+
+          <article class="card">
+            <span>Resolvidos</span>
+            <strong id="chamadosResolvidos">--</strong>
+          </article>
+
+          <article class="card">
+            <span>Cancelados</span>
+            <strong id="chamadosCancelados">--</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao">
+        <div class="secao-titulo">
+          <h3>Resumo de desempenho</h3>
+          <p>Uma visão rápida da movimentação dos chamados.</p>
+        </div>
+
+        <div class="graficos">
+          <article class="painel">
+            <h4>Chamados por período</h4>
+            <canvas id="graficoPeriodo"></canvas>
+          </article>
+
+          <article class="painel">
+            <h4>Tipos mais atendidos</h4>
+            <canvas id="graficoTipos"></canvas>
+          </article>
+        </div>
+      </section>
+
+      <footer class="rodape">
+        <p>Thindesk — Dashboard Administrativo</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
