@@ -30,3 +30,10 @@ Permitir o acompanhamento de chamados técnicos relacionados à operação de pe
 - RF05: Filtros de consulta
 - RF06: Integração com a API
 - RF07: Atualização e tratamento dos dados
+
+
+## Vídeo de apresentação
+
+O vídeo apresenta o funcionamento do Dashboard Administrativo Thindesk, demonstrando os indicadores gerais, gráficos de análise, listagem de chamados, filtros, histórico e atualização de status.
+
+[Assistir à apresentação do Thindesk](https://drive.google.com/file/d/1AugMkGHPHxUBWom-1Wj03oQa5gt4bSdR/view?usp=sharing)
